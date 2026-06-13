@@ -14,7 +14,8 @@ export interface Doctor {
 @Injectable({ providedIn: 'root' })
 export class DoctorService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8080/api/doctors';
+  // private apiUrl = 'http://localhost:8080/api/doctors';
+private apiUrl = 'https://provider-directory-api-2o4q.onrender.com/api/doctors';
 
   getDoctors(): Observable<Doctor[]> {
     return this.http.get<Doctor[]>(this.apiUrl);
